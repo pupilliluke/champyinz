@@ -1,23 +1,42 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './../styles/Landing.css';
+import logoImage from './../assets/images/champyinzLogoCut.png'; // Importing the image
+
+
 
 const Landing = () => {
-  // Smooth Scroll Effect on Page Load
+  const [scrollProgress, setScrollProgress] = useState(0);
+
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    const updateProgress = () => {
+      const scrollTop = window.scrollY; // How much the user has scrolled
+      const windowHeight = document.documentElement.scrollHeight - window.innerHeight; // Total scrollable area
+      const progress = (scrollTop / windowHeight) * 100; // Calculate percentage
+      setScrollProgress(progress);
+    };
+
+    window.addEventListener('scroll', updateProgress);
+    return () => window.removeEventListener('scroll', updateProgress);
   }, []);
 
   return (
     
     <div className="landing-page">
+
+      {/* Scroll Progress Bar */}
+      <div
+        className="scroll-progress-bar"
+        style={{ width: `${scrollProgress}%` }}
+      ></div>
+
+
       {/* Header with Motivational Quote */}
       <header className="header">
-        <h1>CHAMPYINZ</h1>
+        <h1>CHAMPYINZ         <img src={logoImage} alt="Champyinz Logo" className="navbar-logo" />
+        </h1> 
         <p className="quote">“The body achieves what the mind believes.”</p>
       </header>
+      
 
       {/* Hero Section with Call to Action */}
       <section className="hero">
@@ -25,6 +44,14 @@ const Landing = () => {
           <h2>Transform Your Body. Strengthen Your Faith.</h2>
           <a href="#contact" className="cta-btn">Join Us Today</a>
         </div>
+      </section>
+
+      {/* Mission Statement Section */}
+      <section className="mission">
+        <h2>Our Mission</h2>
+        <p>
+          At Champyinz, our mission is to inspire and empower individuals to achieve their highest potential through physical strength and spiritual growth. We are committed to creating a community where faith and fitness go hand in hand, supporting one another in the pursuit of holistic well-being.
+        </p>
       </section>
 
       {/* Carousel for Testimonials or Services */}
@@ -44,7 +71,9 @@ const Landing = () => {
       {/* About Us Section with More Detail */}
       <section className="about">
         <h2>About Us</h2>
-        <p>Champyinz is a fitness community grounded in faith. We blend the pursuit of physical health with spiritual strength. Whether you're a seasoned athlete or just starting your fitness journey, we’re here to help you transform, grow, and succeed. We focus on building both your body and spirit with our tailored training programs and a supportive, faith-driven community.</p>
+        <p>
+          Champyinz is a fitness community grounded in faith. We blend the pursuit of physical health with spiritual strength. Whether you're a seasoned athlete or just starting your fitness journey, we’re here to help you transform, grow, and succeed. We focus on building both your body and spirit with our tailored training programs and a supportive, faith-driven community.
+        </p>
       </section>
 
       {/* Features Section with Cards */}
@@ -77,7 +106,9 @@ const Landing = () => {
       <footer className="footer">
         <p>&copy; 2025 Champyinz | Pittsburgh, PA</p>
       </footer>
+
     </div>
+    
   );
 };
 

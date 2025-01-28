@@ -1,0 +1,69 @@
+/* About Page Styles */
+.about {
+    background-color: rgba(245, 240, 230, 0.9); /* Soft beige background with slight transparency */
+    border: 2px solid #FFD700; /* Gold border */
+    border-radius: 12px;
+    color: #000; /* Dark text for better readability */
+    padding: 60px 30px; /* Increased padding to spread out content */
+    margin-top: 60px; /* Increased spacing above */
+    max-width: 1200px; /* Limit max width for better layout */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* About Section Headings */
+.about h2 {
+    font-size: 3.5rem; /* Increased size */
+    margin-bottom: 40px;
+    font-weight: 600;
+    text-align: center;
+    color: #000; /* Dark text color */
+}
+
+/* Section Styles */
+.about-history,
+.about-founder,
+.about-locations,
+.about-future,
+.about-team {
+    background-color: rgba(245, 240, 230, 0.85); /* Softer beige background */
+    color: #000; /* Dark text for readability */
+    padding: 40px 30px; /* Increased padding for spacing */
+    margin-bottom: 40px; /* Increased bottom margin for separation */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Softer shadow */
+}
+
+/* Section Titles */
+.about-history h3,
+.about-founder h3,
+.about-locations h3,
+.about-future h3,
+.about-team h3 {
+    font-size: 2.2rem; /* Increased size */
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #FFD700; /* Gold color for section titles */
+}
+
+/* Paragraph Styles */
+.about p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    font-weight: 300;
+    color: #333; /* Darker text for readability */
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .about {
+        padding: 40px 20px; /* Less padding on small screens */
+    }
+    .about-history,
+    .about-founder,
+    .about-locations,
+    .about-future,
+    .about-team {
+        padding: 20px;
+    }
+}
