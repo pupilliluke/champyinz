@@ -45,7 +45,7 @@ body {
 /* Hero Section with Background Image */
 .hero {
     background: url('./../assets/images/bridge3.jpg_large') no-repeat top center/cover;
-    height: 50rem;
+    height: 70rem;
     display: flex;
     justify-content: center;
     align-items: center;
