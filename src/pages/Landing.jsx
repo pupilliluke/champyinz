@@ -1,17 +1,24 @@
 import React, { useEffect, useState } from 'react';
+import Slider from 'react-slick';
 import './../styles/Landing.css';
-import logoImage from './../assets/images/champyinzLogoCut.png'; // Importing the image
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-
+import logoImage from './../assets/images/champyinzLogoCut.png';
+import img1 from './../assets/images/bodybuildpose.jpg';
+import img2 from './../assets/images/business.jpg';
+import img3 from './../assets/images/deadlift.jpeg';
+import img4 from './../assets/images/deadlift1.jpeg';
+import img5 from './../assets/images/win.jpg';
 
 const Landing = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
     const updateProgress = () => {
-      const scrollTop = window.scrollY; // How much the user has scrolled
-      const windowHeight = document.documentElement.scrollHeight - window.innerHeight; // Total scrollable area
-      const progress = (scrollTop / windowHeight) * 100; // Calculate percentage
+      const scrollTop = window.scrollY;
+      const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (scrollTop / windowHeight) * 100;
       setScrollProgress(progress);
     };
 
@@ -19,42 +26,64 @@ const Landing = () => {
     return () => window.removeEventListener('scroll', updateProgress);
   }, []);
 
+  const carouselSettings = {
+    dots: false,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  };
+
   return (
-    
     <div className="landing-page">
+      <div className="scroll-progress-bar" style={{ width: `${scrollProgress}%` }}></div>
 
-      {/* Scroll Progress Bar */}
-      <div
-        className="scroll-progress-bar"
-        style={{ width: `${scrollProgress}%` }}
-      ></div>
-
-
-      {/* Header with Motivational Quote */}
-      <header className="header">
-        <h1>CHAMPYINZ         <img src={logoImage} alt="Champyinz Logo" className="navbar-logo" />
-        </h1> 
-        <p className="quote">“The body achieves what the mind believes.”</p>
-      </header>
       
 
-      {/* Hero Section with Call to Action */}
       <section className="hero">
+
+        <div>
+          <header className="header">
+            <h1>CHAMPYINZ <img src={logoImage} alt="Champyinz Logo" className="navbar-logo" /></h1> 
+            
+          </header>
+        </div>
+        
         <div className="hero-content">
           <h2>Transform Your Body. Strengthen Your Faith.</h2>
           <a href="#contact" className="cta-btn">Join Us Today</a>
         </div>
+
       </section>
 
-      {/* Mission Statement Section */}
-      <section className="mission">
-        <h2>Our Mission</h2>
-        <p>
-          At Champyinz, our mission is to inspire and empower individuals to achieve their highest potential through physical strength and spiritual growth. We are committed to creating a community where faith and fitness go hand in hand, supporting one another in the pursuit of holistic well-being.
-        </p>
+      {/* Image Carousel Section */}
+      <section className="image-carousel">
+        <Slider {...carouselSettings}>
+          <div className="carousel-image"><img src={img1} alt="Fitness Training 1" /></div>
+          <div className="carousel-image"><img src={img2} alt="Fitness Training 2" /></div>
+          <div className="carousel-image"><img src={img3} alt="Fitness Training 3" /></div>
+          <div className="carousel-image"><img src={img4} alt="Fitness Training 4" /></div>
+          <div className="carousel-image"><img src={img5} alt="Fitness Training 5" /></div>
+        </Slider>
       </section>
 
-      {/* Carousel for Testimonials or Services */}
       <section className="carousel">
         <div className="carousel-container">
           <div className="carousel-item">
@@ -68,9 +97,9 @@ const Landing = () => {
         </div>
       </section>
 
-      {/* About Us Section with More Detail */}
-      <section className="about">
-        <h2>About Us</h2>
+     {/* About Us Section with More Detail */}
+     <section className="about">
+        <h2>About Champyinz</h2>
         <p>
           Champyinz is a fitness community grounded in faith. We blend the pursuit of physical health with spiritual strength. Whether you're a seasoned athlete or just starting your fitness journey, we’re here to help you transform, grow, and succeed. We focus on building both your body and spirit with our tailored training programs and a supportive, faith-driven community.
         </p>
@@ -94,7 +123,50 @@ const Landing = () => {
           </div>
         </div>
       </section>
+      
+      {/* What's Included Section */}
+      <section className="whats-included">
+        <h2 className="section-title">WHAT'S INCLUDED</h2>
+        <p className="section-subtitle">
+          EVERYTHING YOU NEED TO GET IN SHAPE AND STAY MOTIVATED
+        </p>
 
+        <div className="grid-container">
+          {/* First Row (3 Items) */}
+          <div className="card">
+            <h3>STRUCTURE</h3>
+            <p>Receive a tailored workout program based on your goals and body type.</p>
+          </div>
+          <div className="card">
+            <h3>FOCUS</h3>
+            <p>Workouts are split into upper and lower body days to effectively build muscle.</p>
+          </div>
+          <div className="card">
+            <h3>NUTRITION</h3>
+            <p>Meal plans from a variety of diets, supplement guidance, and recipes.</p>
+          </div>
+
+          {/* Second Row (4 Items) */}
+          <div className="card">
+            <h3>COACHING</h3>
+            <p>Trainers provide guidance on form, technique, and muscle-building strategies.</p>
+          </div>
+          <div className="card">
+            <h3>RESULTS</h3>
+            <p>These features give you the knowledge, guidance, and motivation to get results.</p>
+          </div>
+          <div className="card">
+            <h3>UPDATES</h3>
+            <p>Get the latest updates on my app and provide input on what you want to see.</p>
+          </div>
+          <div className="card">
+            <h3>SUPPORT</h3>
+            <p>Join a community of like-minded individuals who keep you accountable.</p>
+          </div>
+        </div>
+      </section>
+
+ 
       {/* Contact Section */}
       <section className="contact" id="contact">
         <h2>Contact Us</h2>
@@ -108,7 +180,7 @@ const Landing = () => {
       </footer>
 
     </div>
-    
+
   );
 };
 

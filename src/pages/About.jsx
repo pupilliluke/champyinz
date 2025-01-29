@@ -26,8 +26,8 @@ const About = () => {
             </div>
 
             <div class="about-future">
-                <h3>Our Plan for the Future</h3>
-                <p>Looking ahead, we are focused on expanding our reach, introducing new products/services, and continuing to innovate. We aim to stay at the forefront of [industry] while maintaining a strong commitment to our values of [values/mission].</p>
+                <h3>Niche </h3>
+                <p>Helping busy people carve out time to work out, without having to spend a fortune.</p>
             </div>
 
             <div class="about-team">
