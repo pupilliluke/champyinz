@@ -1,0 +1,462 @@
+/* Landing.css */
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Modern, clean font */
+    background: linear-gradient(45deg, #FFD700, #000); /* Gold to Black gradient */
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Header Section */
+.header {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #FFD700;
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: .5rem;
+    padding:1rem;
+
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.quote {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #FFD700;
+    font-weight: 300;
+}
+
+/* Hero Section with Background Image */
+.hero {
+    background: url('./../assets/images/bridge3.jpg_large') no-repeat top center/cover;
+    height: 70rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFD700;
+    padding: 20px;
+    position: relative;
+    flex-direction: column; /* Stack children vertically */
+
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 8px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.cta-btn {
+    background-color: #FFD700;
+    color: #000;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #e5c200;
+}
+
+/* Carousel Section */
+.carousel {
+    padding: 60px 20px;
+    background-color: #1a1a1a;
+    text-align: center;
+}
+
+/* Image Carousel Section */
+.image-carousel {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 400px; /* Adjust as needed */
+    overflow: hidden;
+}
+
+.carousel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.carousel-item {
+    background-color: #FFD700;
+    color: #000;
+    padding: 20px;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.carousel-item p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+/* About Section */
+.about {
+    padding: 80px 20px;
+    margin: 2rem;
+    text-align: center;
+    /* background:transparent(.5%); */
+}
+
+.about h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    font-weight: 600;
+    color: #FFD700;
+}
+
+.about p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+/* Features Section */
+.features {
+    background-color: #333;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #FFD700;
+    font-weight: 600;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.card {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 40px;
+    width: 30%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.card h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+.whats-included {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #FFD700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.25rem;
+    color: #bbb;
+    margin-bottom: 2rem;
+  }
+  
+
+  
+  .card {
+    background: #222;
+    /* padding: 1.5rem; */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease;
+    width:max-content;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card h3 {
+    font-size: 1.5rem;
+    color: #FFD700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #ccc;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns in a row */
+    max-width: 100%;
+    gap: .5rem;
+    margin: 2rem 3rem;
+}
+
+/* Responsive Styling for smaller screens */
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns in a row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* 1 column in a row on small screens */
+    }
+}
+
+  
+
+/* Contact Section */
+.contact {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #333; /* Change to a dark but different color like #333 */
+    color: #FFD700; /* Gold text color */
+}
+
+.contact h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #FFD700; /* Gold */
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #FFD700;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Mission Statement Section */
+.mission {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #1a1a1a; /* Matches other dark sections */
+    color: #FFD700; /* Gold font color */
+}
+
+.mission h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #FFD700; /* Gold */
+}
+
+.mission p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    font-weight: 300;
+    margin: 0 auto;
+    max-width: 800px; /* Center and limit text width */
+}
+
+/* Expand on Hover */
+.card:hover,
+.carousel-item:hover,
+.cta-btn:hover {
+    transform: scale(1.1); /* Expand slightly */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Smooth Transition for Default State */
+.card,
+.carousel-item,
+.cta-btn {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Section Entrance Animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px); /* Start slightly below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Move to normal position */
+    }
+}
+
+/* Apply to Sections */
+section {
+    opacity: 0; /* Initially hidden */
+    animation: fadeInUp 1s ease-in-out forwards; /* Trigger animation */
+    animation-delay: 0.2s; /* Slight delay for a smooth feel */
+}
+
+.cta-btn:hover {
+    transform: scale(1.1);
+    background-color: #e5c200; /* Slightly darker gold */
+    letter-spacing: 1px; /* Subtle letter-spacing change */
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.6);
+    transition: transform 0.3s ease, background-color 0.3s ease, letter-spacing 0.3s ease;
+}
+
+/* Text Hover Effect */
+h1:hover, h2:hover, h3:hover {
+    color: #fff; /* Shift to white for emphasis */
+    transform: translateY(-5px); /* Subtle lift */
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Section Headings */
+h2 {
+    position: relative;
+    overflow: hidden;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #FFD700;
+    transition: width 0.4s ease;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2:hover::after {
+    width: 50%; /* Expands underline on hover */
+}
+
+/* Auto-Sliding Carousel */
+.carousel-container {
+    display: flex;
+    gap: 20px;
+    animation: slideCarousel 8s infinite; /* Loop animation */
+}
+
+@keyframes slideCarousel {
+    0% {
+        transform: translateX(-1%);
+    }
+    50%
+    {
+        transform: translateX(1%); /*smoothen return to other side */
+    }
+    100%{
+        transform: translateX(-1%);
+    }
+}
+
+/* Glow Effect */
+.card:hover, .cta-btn:hover {
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.7); /* Glow effect */
+}
+
+/* Glow for Header Text */
+.header h1:hover {
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+    transition: text-shadow 0.3s ease;
+}/* Scroll Progress Bar */
+.scroll-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5px; /* Adjust the thickness of the progress bar */
+    background-color: #FFD700; /* Golden color */
+    z-index: 1000; /* Make sure it stays on top of everything */
+    transition: width 0.1s ease-out; /* Smooth transition for better UX */
+  }
+  

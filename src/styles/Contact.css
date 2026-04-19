@@ -1,0 +1,135 @@
+.services-page {
+    background-color: #f4f1e1; /* Light beige background */
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Header with Logo */
+  .header {
+    background-color: transparent;
+    color: #FFD700; /* Gold highlights */
+    padding: 40px 0;
+    text-align: center;
+    border-bottom: 2px solid #FFD700;
+  }
+  
+  .header h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+  }
+  
+  .quote {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #000;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-color: #f4f1e1;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #000;
+  }
+  
+  /* Services Section with Service Cards */
+  .services {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: transparent;
+  }
+  
+  .services h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #FFD700;
+  }
+  
+  .service-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .card {
+    background-color: #fff;
+    color: #000;
+    padding: 40px;
+    width: 25%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #FFD700;
+  }
+  
+  .card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Contact Section */
+  .contact {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+  }
+  
+  .contact h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #FFD700;
+  }
+  
+  .contact p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .cta-btn {
+    background-color: #FFD700;
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+  }
+  
+  .cta-btn:hover {
+    background-color: #e0b200;
+    color: #fff;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #000;
+    color: #FFD700;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+  }
+  
+  .footer p {
+    font-size: 1rem;
+    margin: 0;
+  }  
